@@ -80,6 +80,8 @@ define neutron::plugins::ml2::driver (
       'ml2_type_vxlan/vni_ranges':  value => join($vni_ranges, ',');
     }
   }
+  elsif ($name == 'routed') {
+  }
   elsif ($name == 'local') {
     warning('local type_driver is useful only for single-box, because it provides no connectivity between hosts')
   }
